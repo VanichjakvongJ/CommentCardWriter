@@ -8,9 +8,26 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var comment = Comment()
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView {
+            Form {
+                Section {
+                    PickerView(choice: $comment.subject, options: comment.subjects, label: "Subject")
+                    PickerView(choice: $comment.mood, options: comment.moods, label: "Mood")
+                }
+                
+                Button("Generate Comment", action: { comment.generateComment() })
+                
+                Text(comment.text)
+                    .padding()
+                
+            }
+            
+            .navigationTitle("Comment Cards")
+        }
+            
     }
 }
 

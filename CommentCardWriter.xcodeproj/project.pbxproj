@@ -14,6 +14,8 @@
 		4366D24E27AD4C6C00FF2422 /* CommentCardWriterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4366D24D27AD4C6C00FF2422 /* CommentCardWriterTests.swift */; };
 		4366D25827AD4C6C00FF2422 /* CommentCardWriterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4366D25727AD4C6C00FF2422 /* CommentCardWriterUITests.swift */; };
 		4366D25A27AD4C6C00FF2422 /* CommentCardWriterUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4366D25927AD4C6C00FF2422 /* CommentCardWriterUITestsLaunchTests.swift */; };
+		4366D26727AD4E8C00FF2422 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4366D26627AD4E8C00FF2422 /* Comment.swift */; };
+		4366D26B27AD5B9500FF2422 /* PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4366D26A27AD5B9500FF2422 /* PickerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		4366D25327AD4C6C00FF2422 /* CommentCardWriterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CommentCardWriterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4366D25727AD4C6C00FF2422 /* CommentCardWriterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCardWriterUITests.swift; sourceTree = "<group>"; };
 		4366D25927AD4C6C00FF2422 /* CommentCardWriterUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCardWriterUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4366D26627AD4E8C00FF2422 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		4366D26A27AD5B9500FF2422 /* PickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +100,8 @@
 			children = (
 				4366D23C27AD4C6A00FF2422 /* CommentCardWriterApp.swift */,
 				4366D23E27AD4C6A00FF2422 /* ContentView.swift */,
+				4366D26A27AD5B9500FF2422 /* PickerView.swift */,
+				4366D26627AD4E8C00FF2422 /* Comment.swift */,
 				4366D24027AD4C6B00FF2422 /* Assets.xcassets */,
 				4366D24227AD4C6B00FF2422 /* Preview Content */,
 			);
@@ -257,7 +263,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4366D26B27AD5B9500FF2422 /* PickerView.swift in Sources */,
 				4366D23F27AD4C6A00FF2422 /* ContentView.swift in Sources */,
+				4366D26727AD4E8C00FF2422 /* Comment.swift in Sources */,
 				4366D23D27AD4C6A00FF2422 /* CommentCardWriterApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
