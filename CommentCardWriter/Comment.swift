@@ -9,19 +9,40 @@ import Foundation
 
 class Comment: ObservableObject {
     
-    let subjects = ["Computer Science", "Pure Mathematics", "Applied Mathematics", "Physics"]
-    let moods = ["Positive", "Neutral", "Negative"]
+    var subjects = ["Computer Science", "Pure Mathematics", "Applied Mathematics", "Physics", "Chemistry", "Biology"]
+    let goodOrBad = ["Good", "Bad"]
     
-    @Published var text = "Please click 'Generate Comment'"
-    @Published var subject = "Computer Science"
-    @Published var mood = "Negative"
+    @Published var text = ""
+    @Published var subject = ""
+    @Published var enjoyment = ""
+    @Published var knowledge = ""
+    @Published var performance = ""
+    @Published var improvement = ""
     
     func generateComment() {
-        if mood == "Positive" {
-            text = "I am enjoying \(subject) right now. I feel that my theory knowledge is good enough, and I also feel comfortable with programming in Swift, and with SwiftUI. While I find some things difficult sometimes, I hope to continue studying this subject at university."
-        } else if mood == "Negative" {
-            text = "I am not enjoying \(subject) right now. I feel that while my theory knowledge is good enough, I do not feel nearly comfortable enough with programming in Swift, especially with SwiftUI. While I do have some doubts, for now I hope to continue studying this subject."
+        text = ""
+        if enjoyment == "Good" {
+            text += "I am enjoying \(subject) right now. "
+        } else if enjoyment == "Bad" {
+            text += "I am not enjoying \(subject) right now. "
         }
         
+        if knowledge == "Good" {
+            text += "I feel that my current knowledge of the subject is suffcient for where I am currently at. "
+        } else if knowledge == "Bad" {
+            text += "I feel that my current knowledge of the subject is sometimes not quite what it should be. "
+        }
+        
+        if performance == "Good" {
+            text += "I think that I am doing quite well in both in class and with Extra Work. "
+        } else if performance == "Bad" {
+            text += "I think that I have occasionally struggled in class and with Extra Work. "
+        }
+        
+        if improvement == "Good" {
+            text += "I am confident that I will continue to improve in this subject. "
+        } else if improvement == "Bad" {
+            text += "I find that my progress has stagnated in this subject. "
+        }
     }
 }

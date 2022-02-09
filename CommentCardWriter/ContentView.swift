@@ -15,7 +15,10 @@ struct ContentView: View {
             Form {
                 Section {
                     PickerView(choice: $comment.subject, options: comment.subjects, label: "Subject")
-                    PickerView(choice: $comment.mood, options: comment.moods, label: "Mood")
+                    PickerView(choice: $comment.enjoyment, options: comment.goodOrBad, label: "Enjoyment")
+                    PickerView(choice: $comment.knowledge, options: comment.goodOrBad, label: "Knowledge")
+                    PickerView(choice: $comment.performance, options: comment.goodOrBad, label: "Performance")
+                    PickerView(choice: $comment.performance, options: comment.goodOrBad, label: "Improvement")
                 }
                 
                 Button("Generate Comment", action: { comment.generateComment() })
