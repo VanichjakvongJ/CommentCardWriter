@@ -9,15 +9,17 @@ import Foundation
 
 class Comment: ObservableObject {
     
-    var subjects = ["Computer Science", "Pure Mathematics", "Applied Mathematics", "Physics", "Chemistry", "Biology"]
+    var subjects = ["Pure Mathematics", "Applied Mathematics", "Physics", "Chemistry", "Biology", "Computer Science", "Psychology", "Sociology", "English Language", "English Literature", "History", "Geography", "Religious Studies", "Français", "Español", "Deutsch", "Italiano", "Chinese", "Japanese", "Arabic", "Latin", "Classical Greek", "Classical Civilization", "Ancient History", "Economics", "Business", "Politics", "Law", "Art", "Design", "Drama", "Music", "Media Studies", "Food Technology", "Physcial Education", "Art History"]
     let goodOrBad = ["Good", "Bad"]
+    let satisfaction = ["Excellent", "Good", "Average", "Poor", "Terrible"]
     
     @Published var text = ""
-    @Published var subject = ""
-    @Published var enjoyment = ""
-    @Published var knowledge = ""
-    @Published var performance = ""
-    @Published var improvement = ""
+    @Published var custom = ""
+    @Published var subject = "Pure Mathematics"
+    @Published var enjoyment = "Good"
+    @Published var knowledge = "Good"
+    @Published var performance = "Good"
+    @Published var improvement = "Good"
     
     func generateComment() {
         text = ""
@@ -44,5 +46,7 @@ class Comment: ObservableObject {
         } else if improvement == "Bad" {
             text += "I find that my progress has stagnated in this subject. "
         }
+        
+        text += custom
     }
 }

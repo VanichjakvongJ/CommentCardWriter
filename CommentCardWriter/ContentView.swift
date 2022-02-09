@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @ObservedObject var comment = Comment()
+    let pasteboard = UIPasteboard.general
     
     var body: some View {
         NavigationView {
@@ -18,13 +19,18 @@ struct ContentView: View {
                     PickerView(choice: $comment.enjoyment, options: comment.goodOrBad, label: "Enjoyment")
                     PickerView(choice: $comment.knowledge, options: comment.goodOrBad, label: "Knowledge")
                     PickerView(choice: $comment.performance, options: comment.goodOrBad, label: "Performance")
-                    PickerView(choice: $comment.performance, options: comment.goodOrBad, label: "Improvement")
+                    PickerView(choice: $comment.improvement, options: comment.goodOrBad, label: "Improvement")
+                    TextField("Add custom text", text: $comment.custom)
+                        .padding()
                 }
                 
                 Button("Generate Comment", action: { comment.generateComment() })
                 
-                Text(comment.text)
-                    .padding()
+                if comment.text != "" {
+                    Text(comment.text)
+                        .padding()
+                    Button("Copy to Clipboard", action: {pasteboard.string = comment.text})
+                }
                 
             }
             
